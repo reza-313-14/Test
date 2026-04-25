@@ -113,6 +113,3 @@ if __name__ == "__main__":
     )
     
     result = rubika.send_file("./test.zip", "File")
-    
-    if result["success"]:
-        print(f"success send file:
