@@ -77,7 +77,7 @@ async def other_messages(client: Client, message: Message):
     await message.reply("⚠️ لطفاً یک فایل ارسال کنید تا پردازش کنم.")
 
 
-if name == "__main__":
+if __name__ == "__main__":
     if not os.path.exists(DOWNLOAD_PATH):
         os.makedirs(DOWNLOAD_PATH)
         print(f"📁 پوشه {DOWNLOAD_PATH} ساخته شد.")
