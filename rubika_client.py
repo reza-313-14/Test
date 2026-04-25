@@ -106,7 +106,7 @@ rubika = Rubika(
         chat_id=os.environ.get("CHAT_ID")
     )
 
-if name == "__main__":
+if __name__ == "__main__":
     rubika = Rubika(
         token=os.environ.get("TOKEN"),
         chat_id=os.environ.get("CHAT_ID")
