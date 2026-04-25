@@ -85,5 +85,5 @@ def split_file(file_path: str) -> List[str]:
 
 
 
-if name == "__main__":
+if __name__ == "__main__":
     split_file("./25557.jpg")
