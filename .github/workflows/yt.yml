@@ -1,0 +1,36 @@
+name: Show YouTube Channel Info
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_url:
+        description: 'YouTube Video URL'
+        required: true
+        default: 'https://youtu.be/ZLaA58ANTck'
+
+jobs:
+  show-info:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install pytube
+      run: pip install pytube
+      
+    - name: Get Channel Info
+      run: |
+        python << EOF
+        from pytube import YouTube
+        
+        video_url = "https://youtu.be/ZLaA58ANTck?si=PQQy7xTb18IS7-Xd"
+        yt = YouTube(video_url)
+        
+        print(f"Video Title: {yt.title}")
+        print(f"Channel Name: {yt.author}")
+        print(f"Channel URL: {yt.channel_url}")
+        print(f"Channel ID: {yt.channel_id}")
+        EOF
