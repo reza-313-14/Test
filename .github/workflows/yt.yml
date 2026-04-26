@@ -26,7 +26,7 @@ jobs:
         python << EOF
         from pytube import YouTube
         
-        video_url = "https://youtu.be/ZLaA58ANTck"
+        video_url = "${{ github.event.inputs.video_url }}"
         yt = YouTube(video_url)
         
         print(f"Video Title: {yt.title}")
