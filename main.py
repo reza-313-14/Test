@@ -48,6 +48,7 @@ async def handle_file(client: Client, message: Message):
             parts_list = split_file(file_path)
             for i in parts_list:
                 rubika.send_file(i, "File")
+            await message.reply("اپلود تمام شد")
 
     except Exception as e:
         print(f"[ERROR] خطا در پردازش فایل: {e}")
