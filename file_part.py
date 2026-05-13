@@ -3,7 +3,7 @@ import pyzipper
 from typing import List
 
 MAX_PART_SIZE = 45 * 1024 * 1024
-ZIP_PASSWORD = None  # example: b"my_secret_password"
+ZIP_PASSWORD = b"reza123"  # example: b"my_secret_password"
 
 def split_file(file_path: str) -> List[str]:
         
