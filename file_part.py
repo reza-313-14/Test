@@ -41,7 +41,7 @@ def split_file(file_path: str) -> List[str]:
             start_byte = i * effective_part_size
             end_byte = min((i + 1) * effective_part_size, total_size)
             
-            part_name = f"{base_name}.part{part_num:03d}.zip"
+            part_name = f"{base_name}.part{part_num:03d}.zip.mp4"
             part_path = os.path.join(parts_dir, part_name)
             
             print(f"[SPLIT] creating part {part_num}/{num_parts}: {part_name}")
